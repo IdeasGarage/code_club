@@ -20,4 +20,4 @@ arm.move_arm_timed(ELBOW_DOWN,            1)
 arm.move_arm_timed(SHOULDER_UP,           1)
 arm.move_arm_timed(SHOULDER_DOWN,         1)
 
-arm.light_off()
+arm.light_on()
