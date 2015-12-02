@@ -22,4 +22,4 @@ arm.move_arm_timed(BASE_CLOCKWISE,           1)
 arm.move_arm(WRIST_UP)
 arm.move_arm_timed(STOP)
 
-arm.light_off()
+arm.light_on()
