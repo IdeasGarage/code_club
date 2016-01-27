@@ -62,9 +62,7 @@ class robot_arm:
 #######################################################################
     def move_arm_timed(self, cmd, time_duration):
         self.move_arm(cmd)
-
         time.sleep(time_duration)
-
         self.stop()
 
 #######################################################################
@@ -78,7 +76,7 @@ class robot_arm:
 # Turn Light On
 #######################################################################
     def light_on(self):
-        light = 1
+        self.__light = 1
         self.__usb_send(self.__active_command + [self.__light])
 
 
@@ -86,6 +84,6 @@ class robot_arm:
 # Turn Light Off
 #######################################################################
     def light_off(self):
-        light = 0
+        self.__light = 0
         self.__usb_send(self.__active_command + [self.__light])
 

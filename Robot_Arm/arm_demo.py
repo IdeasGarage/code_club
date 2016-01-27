@@ -19,7 +19,6 @@ arm.move_arm_timed(ELBOW_UP,              1)
 arm.move_arm_timed(ELBOW_DOWN,            1)
 arm.move_arm_timed(BASE_CLOCKWISE,           1)
 
-arm.move_arm(WRIST_UP)
-arm.move_arm_timed(STOP)
+arm.move_arm(STOP)
 
-arm.light_on()
+arm.light_off()
