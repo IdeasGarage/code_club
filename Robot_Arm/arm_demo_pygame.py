@@ -52,11 +52,21 @@ while not done:
 
             if event.key == pygame.K_m:
                 arm.move_arm(GRIP_CLOSE)
+ 
+        # LED
+            if event.key == pygame.K_l:
+                arm.light_on()
+                 
 
-        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_o:
+                arm.light_off()
+              
+           
+
+ 	if event.type == pygame.KEYUP:
             arm.stop()
 
         
         pygame.display.flip()
-
+ 
 
