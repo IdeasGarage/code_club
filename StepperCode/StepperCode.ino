@@ -62,17 +62,9 @@ void loop()
   }
   int Action4 = 360 / (5.625 * (1 / 64));
   for(u16StepCounter = 0; u16StepCounter < Action4; u16StepCounter++){
-    vStepMotor2(REVERSE,3);
+    vStepMotor2(REVERSE, 3);
   }
 }
-
-/* Function will pulse all four coils of the stepper motor in either
-the forward
-   or reverse directions. The function accepts to inputs, a true or a
-false denoting
-   the direction the motor should turn in (true = forward, false =
-reverse), and a step
-   delay time in milliseconds between each step. */
 
 void vStepMotor(boolean bDirection, word u16StepDelay)
 {
