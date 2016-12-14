@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
     <head>
-        <script src='/static/js/jquery-1.8.0.min.js'></script>
+        <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
 
         <script>
-            $(document).ready(function() { 
+            $(document).ready(function() {
                 function j_cmd(data, fun)
                 {
                     $.post('/ajax', data, fun);
@@ -18,19 +18,28 @@
                         })
                 })
 
+                $('button.Base_Anticlockwise').click(function() {
+                    j_cmd({
+                            'data' : 'test'
+                        }, function(ret){
+                            console.log(ret);
+                        })
+                })
+
                 $('button.test2').click(function() {
                     j_cmd({
                             'data' : 'test2'
                         }, function(ret){
                             console.log(ret);
                         })
+
                 })
             })
         </script>
     </head>
 
     <body>
-        <button class='test'>test</button>
-        <button class='test2'>test 2</button>
+        <button class='Base_Anticlockwise'>Base Anticlockwise</button>
+        <button class='test2'>Base Clockwise</button>
     </body>
 </html>

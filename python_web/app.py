@@ -4,7 +4,7 @@ sys.path = ['./lib'] + sys.path
 
 from robot_arm import *
 
-
+ 
 app = Flask(__name__)
 
 @app.route('/')
@@ -14,7 +14,7 @@ def index():
 arm = robot_arm()
 
 @app.route('/ajax', methods=['POST'])
- def ajax():
+def ajax():
     if(request.form['data'] == 'test'):
         print 'my sister smells'
         
