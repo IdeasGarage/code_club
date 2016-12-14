@@ -48,20 +48,21 @@ void loop()
   word u16StepCounter2;
 
   /* Rotate the stepper motor one full forward revolution */
-  for (u16StepCounter = 0; u16StepCounter < STEPSPER1REV; u16StepCounter++) {
+  int Action1 = 360 / (5.625 * (1 / 64));
+  for (u16StepCounter = 0; u16StepCounter < Action1; u16StepCounter++) {
     vStepMotor2(FORWARD, 3);
   }
-  
-  for(u16StepCounter = 0; u16StepCounter < STEPSPER1REV; u16StepCounter++){
+  int Action2 = 360 / (5.625 * (1 / 64));
+  for(u16StepCounter = 0; u16StepCounter < Action2; u16StepCounter++){
     vStepMotor(REVERSE, 3);
   }
-
-  for (u16StepCounter2= 0; u16StepCounter2< STEPSPER1REV; u16StepCounter2++) {
+  int Action3 = 360 / (5.625 * (1 / 64));
+  for (u16StepCounter2= 0; u16StepCounter2< Action3; u16StepCounter2++) {
     vStepMotor(FORWARD, 3);
   }
-  
-  for(u16StepCounter = 0; u16StepCounter < STEPSPER1REV; u16StepCounter++){
-    vStepMotor2(REVERSE,5);
+  int Action4 = 360 / (5.625 * (1 / 64));
+  for(u16StepCounter = 0; u16StepCounter < Action4; u16StepCounter++){
+    vStepMotor2(REVERSE,3);
   }
 }
 
