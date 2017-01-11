@@ -44,10 +44,9 @@ void setup()
 void loop()
 {
   /* Used for counting the number of steps the motor has made */
-  word u16StepCounter;
+  /*word u16StepCounter;
   word u16StepCounter2;
 
-  /* Rotate the stepper motor one full forward revolution */
   int Action1 = 360 / (5.625 * (1 / 64));
   for (u16StepCounter = 0; u16StepCounter < Action1; u16StepCounter++) {
     vStepMotor2(FORWARD, 3);
@@ -63,11 +62,12 @@ void loop()
   int Action4 = 360 / (5.625 * (1 / 64));
   for(u16StepCounter = 0; u16StepCounter < Action4; u16StepCounter++){
     vStepMotor2(REVERSE, 3);
-  }
+  }*/
+   scheduleMoveMotor1(360, FORWARD, 3);
 }
 
 void scheduleMoveMotor1(int degrees, boolean bDirection, word StepDelay){
-  int Action = degrees / (5.625 * (1 / 64));
+  float Action = degrees / (5.625 * (1 / 64));
   for(u16StepCounter = 0; u16StepCounter < Action; u16StepCounter++){
     vStepMotor(bDirection, StepDelay);
   }
