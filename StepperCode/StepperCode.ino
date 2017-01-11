@@ -63,7 +63,10 @@ void loop()
   for(u16StepCounter = 0; u16StepCounter < Action4; u16StepCounter++){
     vStepMotor2(REVERSE, 3);
   }*/
-   scheduleMoveMotor1(360, FORWARD, 3);
+   scheduleMoveMotor2(360, FORWARD, 3);
+   scheduleMoveMotor(360, REVERSE, 3);
+   scheduleMoveMotor(360, FORWARD, 3);
+   scheduleMoveMotor2(360, REVERSE, 3);
 }
 
 void scheduleMoveMotor1(int degrees, boolean bDirection, word StepDelay){
