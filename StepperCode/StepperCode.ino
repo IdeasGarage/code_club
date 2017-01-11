@@ -74,7 +74,7 @@ void scheduleMoveMotor1(int degrees, boolean bDirection, word StepDelay){
 }
 
 void scheduleMoveMotor2(int degrees, boolean bDirection, word StepDelay){
-  int Action = degrees / (5.625 * (1 / 64));
+  float Action = degrees / (5.625 * (1 / 64));
   for(u16StepCounter = 0; u16StepCounter < Action; u16StepCounter++){
     vStepMotor2(bDirection, StepDelay);
   }
