@@ -66,6 +66,21 @@ void loop()
   }
 }
 
+void scheduleMoveMotor1(int degrees, boolean bDirection, word StepDelay){
+  int Action = degrees / (5.625 * (1 / 64));
+  for(u16StepCounter = 0; u16StepCounter < Action; u16StepCounter++){
+    vStepMotor(bDirection, StepDelay);
+  }
+}
+
+void scheduleMoveMotor2(int degrees, boolean bDirection, word StepDelay){
+  int Action = degrees / (5.625 * (1 / 64));
+  for(u16StepCounter = 0; u16StepCounter < Action; u16StepCounter++){
+    vStepMotor2(bDirection, StepDelay);
+  }
+  
+}
+
 void vStepMotor(boolean bDirection, word u16StepDelay)
 {
   /* Holds which DIO pin is currently associated with which motor coil */
